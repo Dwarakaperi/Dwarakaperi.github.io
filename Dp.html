@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Port folio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: azure;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .a {
+            height: 60px;
+            width: auto;
+            display: flex;  
+            padding: 10px;
+            gap: 200px;
+            background-color: rgba(255, 255, 255, 0.301);
+            align-items: center;
+        }
+
+        .b {
+            height: 40px;
+            width: 200px;
+        }
+
+        #buttons {
+            width: 400px;
+            padding: 10px;
+            display: flex;
+            font-size: 20px;
+            gap: 30px;
+        }
+
+        #name {
+            font-size: 30px;
+        }
+
+        .mainbutton {
+            height: 20px;
+            width: auto;
+            text-decoration: none;
+            color: black;
+        }
+
+        .aa {
+            height: 550px;
+            display: flex;
+            padding: 40px;
+            gap: 300px;
+        }
+
+        .box {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        #name1 {
+            font-size: 50px;
+            font-weight: 600;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* Typewriter Animation CSS */
+        .typewriter {
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.705);
+            display: inline-block;
+            position: relative;
+        }
+        
+        .typewriter-text {
+            display: inline-block;
+            overflow: hidden;
+            border-right: 2px solid #00aaff;
+            white-space: nowrap;
+            margin: 0;
+            letter-spacing: 1px;
+            animation: 
+                typing 3.5s steps(30, end),
+                blink-caret 0.75s step-end infinite;
+        }
+        
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #00aaff; }
+        }
+        
+        /* Dark mode styles for typewriter */
+        .dark-mode .typewriter {
+            color: rgba(42, 116, 124, 0.705);
+        }
+
+        .Heading {
+            font-size: 40px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .aaa {
+            height: auto;
+            width: auto;
+            display: flex;
+            padding: 10px;
+            gap: 20px;
+        }
+
+        #box2, #box4, #box5 {
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.509);
+        }
+
+        #box2 {
+            height: 200px;
+            width: 600px;
+        }
+
+        #box4 {
+            height: 300px;
+            width: 390px;
+        }
+
+        #box5 {
+            height: 100px;
+            width: 600px;
+        }
+
+        #box2:hover, #box4:hover, #box5:hover, #box3:hover {
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.751);
+        }
+
+        .bb {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        #box3 {
+            width: 700px;
+            background-color: azure;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        #text {
+            padding: 20px;
+            color: white;
+            font-weight: 600;
+            font-size: 25px;
+            height: 200px;
+            width: 200px;
+        }
+
+        .foot {
+            display: flex;
+            padding: 30px;
+            gap: 60px;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                scale: 0.5
+            }
+
+            to {
+                opacity: 1;
+                scale: 1;
+            }
+        }
+
+        .run {
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+
+        .icon-bar {
+            display: flex;
+            gap: 20px;
+            font-size: 22px;
+            align-items: center;
+        }
+
+        .icon-bar a, .icon-bar button {
+            color: black;
+            text-decoration: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Resume Button Styles */
+.resume-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2196aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.resume-btn:hover {
+    background-color: #17576a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-btn i {
+    margin-right: 8px;
+}
+
+/* Dark mode styles for the button */
+.dark-mode .resume-btn {
+    background-color: #1585a7;
+}
+
+.dark-mode .resume-btn:hover {
+    background-color: #17576a;
+}
+
+        .dark-mode {
+            background-color: #2d2b2b;
+            color: rgb(28, 68, 77);
+        }
+
+        .dark-mode a {
+            color: #28434f;
+        }
+
+        .dark-mode #box2,
+        .dark-mode #box3,
+        .dark-mode #box4,
+        .dark-mode #box5 {
+            background-color: #284f53;
+            color: white;
+            box-shadow: 4px 4px 4px rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-mode .icon-bar i {
+            color: rgb(40, 95, 110);
+        }
+    </style>
+</head>
+
+<body style="background-color:azure;">
+    <div class="a">
+        <div class="b" id="name"><img src="assets/DP1-Photoroom.png" alt="" height="40px" width="40px" ></div>
+        <div class="b" id="buttons">
+            <a href="#services&expertise" class="mainbutton">Services</a>
+            <a href="#professional" class="mainbutton">Experience</a>
+            <a href="#project" class="mainbutton">Projects</a>
+            <a href="#contact" class="mainbutton">Contact</a>
+        </div>
+        <div class="b">
+            <div class="icon-bar">
+                <a href="https://github.com/dwarakaperi" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/dwarakaperi" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/DwarakaPeri" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <button id="darkModeToggle" title="Toggle Dark Mode"><i class="fa-regular fa-moon"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="aa">
+        <div class="box">
+            <div id="name1">Hello, I am Dwaraka Peri</div>
+            <div class="typewriter">
+                <p class="typewriter-text" id="typing-text">Software Developer</p>
+            </div>
+            <div style="font-size:20px;color: rgba(0, 0, 0, 0.717);">Computer Science graduate student with industry experience as a Business Analyst. Bridging technical and business domains to develop data-driven solutions. Pursuing specialization in Data Science and AI to solve complex, real-world problems.</div>
+            <div style="margin-top: 30px;">
+                <a href="assets/DwarakaPeri Resume.pdf" download class="resume-btn">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+        <div style="margin-top: 80px;"><img src="assets/profile.jpg" height="450px" width="400px"></div>
+    </div>
+
+    <div class="run">
+        <div class="Heading" id="services">Services</div>
+        <div class="aaa">
+            <div id="box2">
+                <div style="display: flex; align-items: flex-start; padding: 20px;">
+                    <i class="fa-solid fa-globe" style="font-size: 30px; margin-right: 15px;"></i>
+                    <div>
+                        <h3 style="margin: 0;">Web Apps</h3>
+                        <p style="margin-top: 8px;">Building scalable, responsive, and dynamic web applications using modern frameworks and APIs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="box2">
+                <div style="display: flex; align-items: flex-start; padding: 20px;">
+                    <i class="fa-solid fa-window-restore" style="font-size: 30px; margin-right: 15px;"></i>
+                    <div>
+                        <h3 style="margin: 0;">Websites</h3>
+                        <p style="margin-top: 8px;">Designing sleek, user-friendly websites that are mobile-optimized and visually appealing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="box2">
+                <div style="display: flex; align-items: flex-start; padding: 20px;">
+                    <i class="fa-solid fa-desktop" style="font-size: 30px; margin-right: 15px;"></i>
+                    <div>
+                        <h3 style="margin: 0;">Desktop Apps</h3>
+                        <p style="margin-top: 8px;">Creating powerful and efficient desktop applications tailored for performance and usability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="run">
+        <div class="bb" style="background-color:white;">
+            <div class="Heading" id="professional">Professional Experience</div>
+
+            <div id="box3">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <img src="assets/accenture-logo.png" alt="Accenture Logo" height="40px">
+                    <h3 style="margin: 0;">Accenture</h3>
+                </div>
+                <p><strong>Role:</strong> Business Analyst</p>
+                <p><strong>Duration:</strong> Sep 2022 – Sep 2024</p>
+                <p><strong>Key Responsibilities:</strong><li>Collaborated with cross-functional teams to streamline business processes.</li>
+                    <li>Automated workflows with Python, reducing manual effort by 20%.</li>
+                    <li>Facilitated Agile ceremonies, improving project delivery by 15%.</li>
+                    <li>Supported implementation of business intelligence dashboards using Power BI and Tableau.</li>
+                    <li>Conducted gap analysis and risk assessments for proposed changes.</li>
+                </ul>
+                <p><strong>Key Skills:</strong> Business Analysis, Agile, Python, Power BI,Tableau, Process Optimization</p>
+            </div>
+
+            <div id="box3">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <img src="assets/divya-swaroopa-logo.png" alt="Divya Swaroopa Logo" height="40px">
+                    <h3 style="margin: 0;">Divya Swaroopa Financial Limited, Chennai</h3>
+                </div>
+                <p><strong>Role:</strong> Client Relationship Manager</p>
+                <p><strong>Duration:</strong> Jan 2022 – Aug 2022</p>
+                <p><strong>Key Responsibilities:</strong><li>Managed client portfolios, ensuring high customer satisfaction.</li>
+                    <li>Utilized CRM tools, improving lead conversion rates by 10%.</li>
+                    <li>Increased client retention by 12% through strategic coordination.</li>
+                    <li>Hosted webinars and 1-on-1 consultations to educate clients on financial products and market trends.</li>
+                    <li>Conducted regular performance reviews of client portfolios and suggested rebalancing options.
+
+                    </li>
+                </ul>
+                <p><strong>Key Skills:</strong> Client Management, CRM Tools, Customer Retention, Communication</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="run bb" style="background-color:white;">
+        <div class="Heading" id="project">Project Portfolio</div>
+        <div class="aaa">
+                <div id="box4" style="padding: 15px; display: flex; flex-direction: column; height: 350px; width: 100%; overflow: hidden; border-radius: 20px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.509);">
+                    <div style="flex-shrink: 0;">
+                        <img src="assets/automatic-irrigation-thumbnail.jpg" alt="Irrigation" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div style="font-size: 14px; margin-top: 10px; height: 50%; display: flex; flex-direction: column; justify-content: flex-start;">
+                        <h4 style="margin: 5px 0; font-size: 18px; font-weight: bold; color: #333;">Automatic Irrigation System</h4>
+                        <p style="margin: 5px 0;">Waters plants based on soil moisture.</p>
+                        <p style="margin: 5px 0;"><strong>Skills:</strong> C, Arduino, Sensors</p>
+                        <a href="https://github.com/Dwarakaperi/Automated-Irrigation-System" target="_blank" style="text-decoration: none; color: #333; font-size: 16px;">
+                            <i class="fa-brands fa-github" style="font-size: 20px; margin-right: 5px;"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            
+            
+                <div id="box4" style="padding: 15px; display: flex; flex-direction: column; height: 350px; width: 100%; overflow: hidden; border-radius: 20px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.509);">
+                    <div style="flex-shrink: 0;">
+                        <img src="assets/hospital-management-thumbnail.jpg" alt="Hospital" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div style="font-size: 14px; margin-top: 10px; height: 50%; display: flex; flex-direction: column; justify-content: flex-start;">
+                        <h4 style="margin: 5px 0; font-size: 18px; font-weight: bold; color: #333;">Hospital Management System</h4>
+                        <p style="margin: 5px 0;">CLI tool for patient record handling.</p>
+                        <p style="margin: 5px 0;"><strong>Skills:</strong> C, File I/O, Structs</p>
+                        <a href="https://github.com/Dwarakaperi/Hospital-Management-System" target="_blank" style="text-decoration: none; color: #333; font-size: 16px;">
+                            <i class="fa-brands fa-github" style="font-size: 20px; margin-right: 5px;"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            
+            
+                <div id="box4" style="padding: 15px; display: flex; flex-direction: column; height: 350px; width: 100%; overflow: hidden; border-radius: 20px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.509);">
+                    <div style="flex-shrink: 0;">
+                        <img src="assets/chatbot-thumbnail.jpg" alt="Chatbot" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div style="font-size: 14px; margin-top: 10px; height: 50%; display: flex; flex-direction: column; justify-content: flex-start;">
+                        <h4 style="margin: 5px 0; font-size: 18px; font-weight: bold; color: #333;">AI-Powered Chatbot</h4>
+                        <p style="margin: 5px 0;">Customer support bot with 90% accuracy.</p>
+                        <p style="margin: 5px 0;"><strong>Skills:</strong> TensorFlow, SQL, Dialogflow</p>
+                        <a href="https://github.com/dwarakaperi/ai-chatbot" target="_blank" style="text-decoration: none; color: #333; font-size: 16px;">
+                            <i class="fa-brands fa-github" style="font-size: 20px; margin-right: 5px;"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            
+                
+                <div id="box4" style="padding: 15px; display: flex; flex-direction: column; height: 350px; width: 100%; overflow: hidden; border-radius: 20px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.509);">
+                    <div style="flex-shrink: 0;">
+                        <img src="assets/sentiment-thumbnail.jpg" alt="Sentiment Analysis" style="width: 100%; height: 150px; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div style="font-size: 14px; margin-top: 10px; height: 50%; display: flex; flex-direction: column; justify-content: flex-start;">
+                        <h4 style="margin: 5px 0; font-size: 20px; font-weight: bold; color: #333;">Sentiment Analysis Dashboard</h4>
+                        <p style="margin: 5px 0;">Web-based dashboard for sentiment analysis using NLP techniques.</p>
+                        <p style="margin: 5px 0;"><strong>Skills:</strong> Python, Flask, NLP, Plotly</p>
+                        <a href="https://github.com/dwarakaperi/sentiment-analysis-dashboard" target="_blank" style="text-decoration: none; color: #333; font-size: 16px;">
+                            <i class="fa-brands fa-github" style="font-size: 24px; margin-right: 5px;"></i> GitHub
+                        </a>
+                    </div>
+                </div>                                                           
+        </div>
+    </div>
+
+    <div class="run">
+        <div class="Heading" style="font-size: 20px; font-weight: bold; margin-bottom: 10px;">GitHub Statistics</div>
+        <div class="aaa" style="height: 130px; display: flex; gap: 15px;">
+            <!-- Repositories -->
+            <div id="box5" style="flex: 1; padding: 15px; background-color: #f0faff; border-radius: 15px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15); text-align: center;">
+                <i class="fa-solid fa-folder-open" style="font-size: 28px; color: #00bcd4;"></i>
+                <h4 style="margin: 10px 0 5px; font-size: 16px;">Repositories</h4>
+                <p style="font-size: 20px; font-weight: bold; color: #333;">7</p>
+            </div>
+    
+            <!-- Total Commits -->
+            <div id="box5" style="flex: 1; padding: 15px; background-color: #f0faff; border-radius: 15px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15); text-align: center;">
+                <i class="fa-solid fa-code-branch" style="font-size: 28px; color: #00bcd4;"></i>
+                <h4 style="margin: 10px 0 5px; font-size: 16px;">Commits</h4>
+                <p style="font-size: 20px; font-weight: bold; color: #333;">41</p>
+            </div>
+    
+            <!-- Total Contributions -->
+            <div id="box5" style="flex: 1; padding: 15px; background-color: #f0faff; border-radius: 15px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15); text-align: center;">
+                <i class="fa-solid fa-handshake" style="font-size: 28px; color: #00bcd4;"></i>
+                <h4 style="margin: 10px 0 5px; font-size: 16px;">Contributions</h4>
+                <p style="font-size: 20px; font-weight: bold; color: #333;">74</p>
+            </div>
+    
+            <!-- Top Language -->
+            <div id="box5" style="flex: 1; padding: 15px; background-color: #f0faff; border-radius: 15px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15); text-align: center;">
+                <i class="fa-brands fa-html5" style="font-size: 28px; color: #00bcd4;"></i>
+                <h4 style="margin: 10px 0 5px; font-size: 16px;">Top Language</h4>
+                <p style="font-size: 20px; font-weight: bold; color: #333;">HTML</p>
+            </div>
+        </div>
+    </div>
+    
+      
+    <footer id="contact" class="run" style="background-color: rgba(28, 111, 106, 0.671); height: 400px; width: auto; color: white; padding: 40px;">
+        <div class="foot">
+            <div style="flex: 1; padding: 20px;">
+                <h3>Dwaraka Peri</h3>
+                <p>Aspiring Data Scientist & Software Developer</p>
+                <p>Master's Student in Computer Science at the University of South Dakota.</p>
+            </div>
+            
+            <div style="flex: 1; padding: 20px;">
+                <h3>Quick Links</h3>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#services" style="color: #e6f4ff; text-decoration: none;">Services</a></li>
+                    <li><a href="#professional" style="color: #e4f2fd; text-decoration: none;">Experience</a></li>
+                    <li><a href="#project" style="color: hsl(208, 100%, 96%); text-decoration: none;">Projects</a></li>
+                    <li><a href="#contact" style="color: #edf4fa; text-decoration: none;">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div style="flex: 1; padding: 20px;">
+                <h3>Contact Info</h3>
+                <p>Email: <a href="mailto:dwarakaperi@email.com" style="color: #90caf9;">dwarakaperi@email.com</a></p>
+                <p>Phone: +1 (945) 237-6175</p>
+                <p>Location: Vermillion,SD, USA</p>
+            </div>
+            
+            <div style="flex: 1; padding: 20px;">
+                <h3>Follow Me</h3>
+                <div class="icon-bar">
+                    <a href="https://github.com/dwarakaperi" target="_blank"><i class="fa-brands fa-github" style="font-size: 30px; color: #90caf9;"></i></a>
+                    <a href="https://linkedin.com/in/dwarakaperi" target="_blank"><i class="fa-brands fa-linkedin" style="font-size: 30px; color: #90caf9;"></i></a>
+                    <a href="https://twitter.com/DwarakaPeri" target="_blank"><i class="fa-brands fa-twitter" style="font-size: 30px; color: #90caf9;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+     // Typewriter effect with multiple texts
+    const texts = ["Software Developer", "Data Scientist", "AI Researcher", "Business Analyst"];
+    let count = 0;
+    let index = 0;
+    let currentText = "";
+    let letter = "";
+    let isDeleting = false;
+    let typingSpeed = 150;
+    let pauseBetweenTexts = 2000;
+
+    (function type() {
+        const typingText = document.getElementById("typing-text");
+        
+        if (count === texts.length) {
+            count = 0;
+        }
+        
+        currentText = texts[count];
+        
+        if (isDeleting) {
+            letter = currentText.substring(0, index - 1);
+            typingSpeed = 50;
+            index--;
+        } else {
+            letter = currentText.substring(0, index + 1);
+            typingSpeed = 150;
+            index++;
+        }
+        
+        typingText.textContent = letter;
+        
+        if (!isDeleting && letter === currentText) {
+            typingSpeed = pauseBetweenTexts;
+            isDeleting = true;
+        } else if (isDeleting && letter === "") {
+            isDeleting = false;
+            count++;
+            typingSpeed = 500;
+        }
+        
+        setTimeout(type, typingSpeed);
+    })();
+</script>
+
+    <script>
+        const toggleButton = document.getElementById('darkModeToggle');
+        const icon = toggleButton.querySelector('i');
+
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+    </script>
+</body>
+</html>
+
